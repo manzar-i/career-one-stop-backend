@@ -1,0 +1,10 @@
+fetch('/api/jobs')
+  .then(response => response.json())
+  .then(data => {
+    const jobList = document.getElementById('jobs');
+    data.forEach(job => {
+      const jobItem = document.createElement('li');
+      jobItem.textContent = `${job.title} - ${job.location}`;
+      jobList.appendChild(jobItem);
+    });
+  });
