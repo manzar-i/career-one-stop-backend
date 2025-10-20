@@ -1,10 +1,24 @@
-fetch('/api/jobs')
-  .then(response => response.json())
-  .then(data => {
-    const jobList = document.getElementById('jobs');
-    data.forEach(job => {
-      const jobItem = document.createElement('li');
-      jobItem.textContent = `${job.title} - ${job.location}`;
-      jobList.appendChild(jobItem);
-    });
-  });
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
